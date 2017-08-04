@@ -1,0 +1,121 @@
+html {
+  font-family: Helvetica;
+  font-size: 18px;
+  line-height: 1.4;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.top {
+  background-image: url(../images/glasses-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 31rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+header {
+  background-color: cadetblue;
+  color: white;
+  display: flex;
+  width: 960px;
+  height: 3rem;
+  position: absolute;
+  top: 1rem;
+  align-items: center;
+}
+header img {
+  height: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+nav {
+  position: absolute;
+  right: 1rem;
+}
+li {
+  display: inline-block;
+  padding: 1rem
+}
+.container {
+  width: 960px;
+  position: relative;
+}
+.top h1 {
+  background-color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+  padding: 1.5rem 5rem;
+  position: absolute;
+  top: 14rem;
+  right: -2rem;
+}
+.middle {
+  display: flex;
+  margin: 3rem 0rem;
+  width: 100%;
+  justify-content: center;
+}
+.exams, figure {
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.exams img, figure img {
+  margin: 0rem 3rem;
+}
+.exams img {
+  width: 3.5rem;
+}
+.fittings img, .delivery img{
+  width: 5rem;
+}
+figcaption {
+  text-align: center;
+  width: 5rem;
+
+}
+.exams p {
+  text-align: center;
+  width: 9rem;
+}
+.bottom {
+  display: flex;
+  width: 960px;
+  justify-content: center;
+}
+h3 {
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  background-color: cadetblue;
+  padding: 0.5rem 1.25rem;
+  width: 10rem;
+  text-transform: uppercase;
+}
+.Philosophy, .Appointments {
+  width: 35%;
+  margin-right: 5%;
+}
+.Philosophy p, .Appointments p {
+  margin-top: 1rem;
+}
+footer {
+  background-color: azure;
+  height: 9.5rem;
+  width: 960px;
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+}
+footer img {
+  height: 1.5rem;
+  margin: 4rem 1rem 4rem 4rem;
+}
