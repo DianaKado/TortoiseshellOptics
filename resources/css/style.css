@@ -29,20 +29,32 @@ header {
   align-items: center;
 }
 header img {
+  display: flex;
   height: 1.5rem;
   padding-left: 2rem;
   padding-right: 1rem;
 }
+header p {
+  display: flex;
+}
 nav {
+  display: flex;
   position: absolute;
   right: 1rem;
 }
+ul {
+  position: relative;
+}
 li {
-  display: inline-block;
-  padding: 1rem
+  display: inline-flex;
+  padding: 1rem;
+}
+button {
+  display: none;
 }
 .container {
   width: 960px;
+  display: flex;
   position: relative;
 }
 .top h1 {
@@ -118,4 +130,58 @@ footer {
 footer img {
   height: 1.5rem;
   margin: 4rem 1rem 4rem 4rem;
+}
+@media only screen and (max-width: 880px) {
+  .top {
+    height: 22rem;
+  }
+  header {
+    top: 0rem;
+    width: 880px;
+  }
+  .container {
+    width: 880px;
+  }
+  .top h1 {
+    font-size: 1.33rem;
+    padding: 0.75rem 4rem;
+    top: 8rem;
+    right: 2rem;
+  }
+  .bottom {
+    width: 880px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .top {
+    height: 17rem;
+    background-position: 20%;
+  }
+  header {
+    width: 800px;
+  }
+  .container {
+    width: 100%;
+  }
+  .top h1 {
+    font-size: 1rem;
+    padding: 1rem;
+    top: 12rem;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    right: 0rem;
+  }
+  button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    position: relative;
+    right: 1rem;
+  }
+  ul {
+    display: none;
+  }
 }
