@@ -3,11 +3,6 @@ html {
   font-size: 18px;
   line-height: 1.4;
 }
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .top {
   background-image: url(../images/glasses-bg.png);
   background-repeat: no-repeat;
@@ -15,8 +10,9 @@ body {
   background-size: cover;
   height: 31rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   width: 100%;
+  align-items: center;
 }
 header {
   background-color: cadetblue;
@@ -24,30 +20,29 @@ header {
   display: flex;
   width: 960px;
   height: 3rem;
-  position: absolute;
-  top: 1rem;
+  margin-top: 1rem;
   align-items: center;
+  justify-content: space-between;
 }
-header img {
+.logotype {
   display: flex;
+  align-items: center;
+  min-width: 320px;
+}
+.logotype img {
   height: 1.5rem;
-  padding-left: 2rem;
-  padding-right: 1rem;
-}
-header p {
-  display: flex;
+  margin-left: 2rem;
+  margin-right: 1rem;
 }
 nav {
   display: flex;
-  position: absolute;
-  right: 1rem;
+  margin-right: 1rem;
 }
 ul {
-  position: relative;
+  display: flex;
 }
 li {
-  display: inline-flex;
-  padding: 1rem;
+  margin: 1rem;
 }
 button {
   display: none;
@@ -55,17 +50,16 @@ button {
 .container {
   width: 960px;
   display: flex;
-  position: relative;
+  justify-content: flex-end;
 }
-.top h1 {
+.container h1 {
   background-color: white;
   font-size: 2rem;
   font-weight: bold;
   line-height: 1.2rem;
   padding: 1.5rem 5rem;
-  position: absolute;
-  top: 14rem;
-  right: -2rem;
+  margin-top: 10rem;
+  margin-right: -2rem;
 }
 .middle {
   display: flex;
@@ -73,14 +67,14 @@ button {
   width: 100%;
   justify-content: center;
 }
-.exams, figure {
+figure {
   height: 8rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-.exams img, figure img {
+figure img {
   margin: 0rem 3rem;
 }
 .exams img {
@@ -92,15 +86,14 @@ button {
 figcaption {
   text-align: center;
   width: 5rem;
-
 }
-.exams p {
+.exams figcaption {
   text-align: center;
   width: 9rem;
 }
 .bottom {
   display: flex;
-  width: 960px;
+  width: 100%;
   justify-content: center;
 }
 h3 {
@@ -114,10 +107,15 @@ h3 {
 }
 .Philosophy, .Appointments {
   width: 35%;
-  margin-right: 5%;
+  margin: 0rem 5%;
 }
 .Philosophy p, .Appointments p {
   margin-top: 1rem;
+}
+.hundredpercent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 footer {
   background-color: azure;
@@ -136,8 +134,8 @@ footer img {
     height: 22rem;
   }
   header {
-    top: 0rem;
-    width: 880px;
+    margin-top: 0rem;
+    width: 100%;
   }
   .container {
     width: 880px;
@@ -145,32 +143,29 @@ footer img {
   .top h1 {
     font-size: 1.33rem;
     padding: 0.75rem 4rem;
-    top: 8rem;
-    right: 2rem;
-  }
-  .bottom {
-    width: 880px;
+    margin-top: 5rem;
+    margin-right: 2rem;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 620px) {
   .top {
     height: 17rem;
     background-position: 20%;
   }
   header {
-    width: 800px;
+    width: 100%;
   }
   .container {
     width: 100%;
+    justify-content: center;
   }
-  .top h1 {
+.container h1 {
     font-size: 1rem;
     padding: 1rem;
-    top: 12rem;
+    margin-top: 9rem;
     width: 100%;
     text-align: center;
-    justify-content: center;
-    right: 0rem;
+    margin-right: 0rem;
   }
   button {
     display: flex;
@@ -178,10 +173,55 @@ footer img {
     border: none;
     font-size: 1rem;
     color: white;
-    position: relative;
-    right: 1rem;
+    margin-right: 1rem;
   }
   ul {
+    display: none;
+  }
+  .middle {
+    flex-direction: column;
+    margin: 3rem 0rem;
+  }
+  figure {
+    margin: 0rem 0rem;
+    height: auto;
+    justify-content: center;
+  }
+  figure img {
+    margin: 0.77rem;
+  }
+  figcaption {
+    font-size: 0.77rem;
+    line-height: 1rem;
+    margin: 0.77rem;
+  }
+  .exams figcaption {
+    width: 7rem;
+  }
+  .bottom {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+  .Philosophy, .Appointments {
+    width: 100%;
+    margin: 1rem 0rem 4rem 0rem;
+  }
+  .Philosophy, .Appointments p {
+    font-size: 0.77rem;
+  }
+  h3 {
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem;
+  }
+  footer {
+    justify-content: center;
+  }
+  footer img {
+    margin: 0rem;
+  }
+  footer p {
     display: none;
   }
 }
